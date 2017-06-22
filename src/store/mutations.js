@@ -8,7 +8,11 @@ import { Toast } from 'mint-ui';
 
 const state = {
   count: 20,
-  test2:'1'
+  test2:'1',
+  editImg:'',//和图片编辑页面传输的地址
+  BBS:{
+  	
+  }  // 宝宝书
 };
 const mutations = {
 	[types.ADD](state) {

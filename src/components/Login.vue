@@ -1,9 +1,12 @@
 <template>
 	<div id="home">
-		<mt-header  @click.native='testBtn' title="标题过长会隐s藏后面的内容啊哈哈哈哈">
-		    <mt-button icon="back">返11回</mt-button>
-		    <mt-button icon="more" slot="right"></mt-button>
-		 </mt-header>
+		<mt-header @click.native='testBtn'>
+		 <router-link to="/" slot="left">
+		    <mt-button icon="back">返回</mt-button>
+		    <mt-button>关闭</mt-button>
+		  </router-link>
+		  <mt-button icon="more" slot="right"></mt-button>
+		</mt-header>
 		 
 		 	<h3>welcome vuex-demo</h3>
 		    <input type="button" value="增加" @click="add">
@@ -13,9 +16,10 @@
 		    <div>
 		      现在数字为test: {{test2}}
 		    </div>
+		    <i class="icon iconfont">&#xe600;</i>
 	</div>
 </template>
-
+	
 <script>
 import { Toast ,Indicator ,MessageBox,Swipe, SwipeItem} from 'mint-ui';	
 import {mapGetters, mapActions} from 'vuex'
